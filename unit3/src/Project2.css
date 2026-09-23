@@ -1,0 +1,84 @@
+.calc2 {
+  width: 360px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #1e1e2f;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  font-family: Arial, sans-serif;
+}
+
+.calc2 h2 {
+  color: white;
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+/* SCREEN */
+.calc2-screen {
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  background: #111;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* BUTTON GRID */
+.calc2-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+/* BUTTONS */
+.calc2-btn {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  background: #35354a;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calc2-btn:hover {
+  background: #4a4a62;
+}
+
+/* AC / C / +/- */
+.calc2-btn.fn {
+  background: #66667a;
+}
+
+/* OPERATORS */
+.calc2-btn.op {
+  background: #527da3;
+}
+
+/* ACTIVE OPERATOR */
+.calc2-btn.op.active {
+  background: #79a9d1;
+}
+
+/* EQUAL */
+.calc2-btn.eq {
+  background: #4d9bd3;
+  font-size: 25px;
+}
+
+/* ZERO */
+.calc2-btn.zero {
+  grid-column: span 2;
+}

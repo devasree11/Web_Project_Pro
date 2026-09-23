@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111313" />
+    <meta
+      name="description"
+      content="Devasree — Full-Stack Developer and Computer Science Engineering student. Explore my projects, skills, and journey building modern, user-friendly digital experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Devasree · Full-Stack Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Creative developer crafting modern, user-friendly digital experiences with React, JavaScript and Python."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Devasree · Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("portfolio-theme");
+        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="bg-fx" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <header class="navbar">
+        <div class="nav-inner">
+          <a class="brand" href="#/home" aria-label="Devasree — home">
+            <span class="brand-mark">D</span>
+            Devasree<span style="color: var(--accent)">.</span>
+          </a>
+
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="#/home" data-route="home">Home</a>
+            <a href="#/about" data-route="about">About</a>
+            <a href="#/skills" data-route="skills">Skills</a>
+            <a href="#/projects" data-route="projects">Projects</a>
+            <a href="#/hobbies" data-route="hobbies">Hobbies</a>
+            <a href="#/contact" data-route="contact">Contact</a>
+          </nav>
+
+          <div class="nav-actions">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+              title="Toggle dark / light mode"
+            >
+              ☀️
+            </button>
+            <button
+              class="menu-toggle"
+              id="menu-toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+
+        <!-- ===================== HOME ===================== -->
+        <div class="page" id="page-home">
+        <section class="hero">
+          <div class="hero-left">
+            <span class="hero-hello"><span class="status-dot"></span> Available for internships &amp; collaborations</span>
+
+            <h1>
+              Devasree<br />
+              <span class="gradient-text">builds for the web.</span>
+            </h1>
+
+            <div class="hero-role"><span>&gt;</span> <span id="typewriter"></span><span class="caret"></span></div>
+
+            <p class="hero-desc">
+              Computer Science Engineering Student turning thoughtful ideas into useful, expressive
+              digital experiences. I care about the details that make technology
+              feel clear, human, and easy to use.
+            </p>
+
+            <div class="hero-buttons">
+              <a class="btn btn-primary" href="#/projects">
+                View selected work <span aria-hidden="true">↗</span>
+              </a>
+              <a class="btn btn-ghost" href="#/contact">Contact Me</a>
+            </div>
+
+            <div class="hero-socials" id="hero-socials"></div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="portrait-wrap">
+              <div class="portrait-ring"></div>
+              <img class="portrait-img" src="assets/profileee.png" alt="Devasree" />
+              <span class="portrait-tag tag-1">React / UI</span>
+              <span class="portrait-tag tag-2">Curious by nature</span>
+              <span class="portrait-tag tag-3">Chennai, IN</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track" id="marquee-track"></div>
+        </div>
+
+        <section class="section">
+          <div class="section-head">
+            <span class="badge">Selected work</span>
+            <h2>Ideas made tangible.</h2>
+            <p>
+              A few things I'm proud of — from interactive dashboards to polished
+              responsive websites.
+            </p>
+          </div>
+
+          <div class="project-grid" id="home-projects"></div>
+        </section>
+
+        <section class="section stats-grid" id="home-stats"></section>
+
+        <section class="section cta-banner reveal">
+          <h2>Have an idea worth building?</h2>
+          <p>I'm always open to internships, collaborations and new challenges.</p>
+          <a class="btn btn-primary" href="#/contact">Let's Talk →</a>
+        </section>
+        </div>
+
+        <!-- ===================== ABOUT ===================== -->
+        <div class="page" id="page-about">
+        <section class="section about-section">
+          <div class="section-header">
+            <div class="section-subtitle">About Me</div>
+            <h2 class="section-title">My Education Journey</h2>
+            <div class="section-divider" />
+          </div>
+
+          <div class="about-container">
+            <div class="about-left">
+              <div class="about-name">Devasree P</div>
+              <div class="about-title-role">
+                Student at Prince Dr. K. Vasudevan College of Engineering and Technology
+              </div>
+              <p class="about-bio">
+                I'm a passionate Computer Science student with a strong foundation in
+                software development and a keen interest in building innovative digital
+                solutions. My journey in tech is driven by curiosity and a desire to create
+                meaningful impact through technology.
+              </p>
+
+              <div class="about-skills-tags">
+                <span><i class="fas fa-code"></i> Full-Stack Development</span>
+                <span><i class="fas fa-paint-brush"></i> UI/UX Design</span>
+                <span><i class="fas fa-cloud"></i> Cloud Computing</span>
+                <span><i class="fas fa-brain"></i> AI &amp; ML</span>
+                <span><i class="fas fa-database"></i> Database Management</span>
+                <span><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">8.4</div>
+                  <div class="stat-label">CGPA</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number accent">26</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">12</div>
+                  <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number accent">1</div>
+                  <div class="stat-label">Hackathons</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-right">
+              <div class="education-grid-right">
+                <div class="edu-box-right degree">
+                  <div class="edu-header">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-level">Current Pursuing</div>
+                  </div>
+                  <div class="edu-title">B.E. Computer Science</div>
+                  <div class="edu-school">
+                    Prince Dr. K. Vasudevan College of Engineering and Technology
+                  </div>
+                  <div class="edu-detail"><i class="fas fa-calendar-alt"></i> 2025 - 2029</div>
+                  <div class="edu-detail"><i class="fas fa-star"></i> CGPA: 8.4 / 10</div>
+                  <span class="edu-badge-right">Degree</span>
+                </div>
+
+                <div class="edu-box-right hsc">
+                  <div class="edu-header">
+                    <div class="edu-icon"><i class="fas fa-school"></i></div>
+                    <div class="edu-level">Higher Secondary (HSC)</div>
+                  </div>
+                  <div class="edu-title">12th Standard</div>
+                  <div class="edu-school">[Your HSC School Name Here]</div>
+                  <div class="edu-detail"><i class="fas fa-calendar-alt"></i> 2024 - 2025</div>
+                  <div class="edu-detail"><i class="fas fa-percentage"></i> Percentage: 82%</div>
+                  <span class="edu-badge-right">HSC</span>
+                </div>
+
+                <div class="edu-box-right sslc">
+                  <div class="edu-header">
+                    <div class="edu-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="edu-level">Secondary (SSLC)</div>
+                  </div>
+                  <div class="edu-title">10th Standard</div>
+                  <div class="edu-school">[Your SSLC School Name Here]</div>
+                  <div class="edu-detail"><i class="fas fa-calendar-alt"></i> 2022 - 2023</div>
+                  <div class="edu-detail"><i class="fas fa-percentage"></i> Percentage: 84%</div>
+                  <span class="edu-badge-right">SSLC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <!-- ===================== SKILLS ===================== -->
+        <div class="page" id="page-skills">
+        <section class="section">
+          <div class="section-head center">
+            <span class="badge">Technical Expertise</span>
+            <h2>My Skills</h2>
+            <p>Technologies and tools I use to turn ideas into useful digital products.</p>
+          </div>
+
+          <div class="skills-layout">
+            <div class="card reveal" id="skill-groups"></div>
+
+            <div class="card reveal">
+              <h3 class="skill-group-title">Tools &amp; Platforms</h3>
+              <div class="tools-grid" id="tools-grid"></div>
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <div class="page" id="page-projects">
+        <section class="section">
+          <div class="section-head center">
+            <span class="badge">Portfolio</span>
+            <h2>Featured Projects</h2>
+            <p>
+              A collection of projects that showcase my technical knowledge,
+              creativity and problem-solving abilities.
+            </p>
+          </div>
+
+          <div class="filters" id="filters"></div>
+
+          <div class="project-grid" id="projects-grid"></div>
+        </section>
+        </div>
+
+        <!-- ===================== HOBBIES ===================== -->
+        <div class="page" id="page-hobbies">
+        <section class="section">
+          <div class="section-head center">
+            <span class="badge">Beyond Code</span>
+            <h2>Things I Love to Do</h2>
+            <p>Exploring my interests and passions through these activities.</p>
+          </div>
+
+          <div class="hobby-grid" id="hobby-grid"></div>
+        </section>
+        </div>
+
+        <!-- ===================== CONTACT ===================== -->
+        <div class="page" id="page-contact">
+        <section class="section">
+          <div class="section-head center">
+            <span class="badge">Contact</span>
+            <h2>Let's Connect</h2>
+            <p>Have an idea, opportunity or question? I would love to hear from you.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info-card reveal" id="contact-info"></div>
+
+            <form class="card contact-form-card reveal" id="contact-form" novalidate>
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="name">Your Name</label>
+                  <input id="name" type="text" placeholder="Jane Doe" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="jane@example.com" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="6"
+                  placeholder="Tell me about your project or opportunity..."
+                ></textarea>
+              </div>
+
+              <div class="form-message" id="form-message" role="alert"></div>
+
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start">
+                Send Message →
+              </button>
+            </form>
+          </div>
+        </section>
+        </div>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a class="brand" href="#/home">
+                <span class="brand-mark">D</span>
+                Devasree<span style="color: var(--accent)">.</span>
+              </a>
+              <p>
+                Computer Science Engineering student crafting creative,
+                user-friendly digital experiences with modern technology.
+              </p>
+            </div>
+
+            <div class="footer-col">
+              <h4>Navigate</h4>
+              <ul>
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/skills">Skills</a></li>
+                <li><a href="#/projects">Projects</a></li>
+                <li><a href="#/hobbies">Hobbies</a></li>
+                <li><a href="#/contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>Connect</h4>
+              <ul id="footer-connect"></ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span id="footer-copy"></span>
+            <div class="footer-socials" id="footer-socials"></div>
+          </div>
+        </div>
+      </footer>
+
+      <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

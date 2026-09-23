@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter App</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#F8E8FF,#E9D5FF,#D8B4FE);
+}
+
+.container{
+    width:380px;
+    background:#FFFFFF;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(124,58,237,0.25);
+}
+
+h1{
+    color:#7C3AED;
+    font-size:38px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+#count{
+    font-size:75px;
+    color:#EC4899;
+    font-weight:bold;
+    margin:30px 0;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    width:100px;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
+}
+
+#increase{
+    background:#e284b3;
+}
+
+#increase:hover{
+    background:#f57cb8;
+    transform:translateY(-3px);
+}
+
+#reset{
+    background:#8B5CF6;
+}
+
+#reset:hover{
+    background:#7C3AED;
+    transform:translateY(-3px);
+}
+
+#decrease{
+    background:#dae746;
+}
+
+#decrease:hover{
+    background:#8daa0e;
+    transform:translateY(-3px);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>COUNTER APP</h1>
+
+    <h2 id="count">0</h2>
+
+    <div class="buttons">
+        <button id="increase">+1</button>
+        <button id="reset">Reset</button>
+        <button id="decrease">-1</button>
+    </div>
+
+</div>
+
+<script>
+
+let count = 0;
+
+const display = document.getElementById("count");
+
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decrease");
+const resetBtn = document.getElementById("reset");
+
+increaseBtn.addEventListener("click", function(){
+    count++;
+    display.textContent = count;
+});
+
+decreaseBtn.addEventListener("click", function(){
+    count--;
+    display.textContent = count;
+});
+
+resetBtn.addEventListener("click", function(){
+    count = 0;
+    display.textContent = count;
+});
+
+</script>
+
+</body>
+</html>

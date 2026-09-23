@@ -1,0 +1,305 @@
+/* =========================================================
+   STUDENT REGISTRATION FORM (Formvalidation.jsx)
+========================================================= */
+.form-card {
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 34px;
+  backdrop-filter: blur(10px);
+}
+
+.form-header {
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.field-group {
+  margin-bottom: 22px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.char-count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+.char-count.low {
+  color: #f87171;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 13px 44px 13px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--heading);
+  font-size: 14.5px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrap input::placeholder {
+  color: var(--text-soft);
+  opacity: 0.7;
+}
+
+.input-wrap input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.input-wrap.is-invalid input {
+  border-color: #f87171;
+}
+
+.input-wrap.is-invalid input:focus {
+  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.16);
+}
+
+.input-wrap.is-valid input {
+  border-color: var(--success);
+}
+
+.field-status {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.field-status.pass {
+  color: var(--success);
+}
+
+.field-status.fail {
+  color: #f87171;
+}
+
+.field-error {
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: #f87171;
+  display: flex;
+  gap: 6px;
+}
+
+.field-error::before {
+  content: "✕";
+}
+
+.error-summary {
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.32);
+  color: #f87171;
+}
+
+.error-summary strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.error-summary ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.error-summary li {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Password strength */
+.strength-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.strength-label.level-0 { color: #f87171; }
+.strength-label.level-1 { color: #fbbf24; }
+.strength-label.level-2 { color: #34d399; }
+.strength-label.level-3 { color: var(--success); }
+
+.strength-bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.strength-bars span {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--border);
+  transition: background 0.3s ease;
+}
+
+.strength-bars span.active.level-0 { background: #f87171; }
+.strength-bars span.active.level-1 { background: #fbbf24; }
+.strength-bars span.active.level-2 { background: #34d399; }
+.strength-bars span.active.level-3 { background: var(--success); }
+
+.password-checks {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.password-checks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-soft);
+}
+
+.password-checks li span {
+  font-weight: 800;
+}
+
+.password-checks li.pass {
+  color: var(--success);
+}
+
+.password-checks li.fail {
+  color: var(--text-soft);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  color: var(--heading);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 26px var(--glow);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success panel */
+.success-panel {
+  text-align: center;
+}
+
+.success-panel h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: var(--success);
+}
+
+.success-note {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.kv-list {
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.kv {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 18px;
+  background: var(--input-bg);
+}
+
+.kv + .kv {
+  border-top: 1px solid var(--border);
+}
+
+.kv span {
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.kv strong {
+  font-size: 14px;
+  color: var(--heading);
+  text-align: right;
+  word-break: break-word;
+}
+
+@media (max-width: 560px) {
+  .form-card {
+    padding: 24px 20px;
+  }
+}
