@@ -70,7 +70,7 @@ function Project2() {
   };
 
   return (
-    <div className="calc2">
+    <div className="calc2" id="calculator">
       <h2>Calculator 2 </h2>
       <div className="calc2-screen">{display}</div>
       <div className="calc2-grid">

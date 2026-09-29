@@ -40,7 +40,7 @@ function Project3() {
   ).length;
 
   return (
-    <div className="attendance">
+    <div className="attendance" id="attendance">
 
       <h1>Student Attendance</h1>
 

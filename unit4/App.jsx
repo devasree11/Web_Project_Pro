@@ -7,10 +7,11 @@ import SkillsPage from "./pages/SkillsPage.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
 import HobbiesPage from "./pages/HobbiesPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import Formvalidation from "./Formvalidation.jsx";
 import { useTheme } from "./hooks.js";
 import "./App.css";
 
-const ROUTES = ["home", "about", "skills", "projects", "hobbies", "contact"];
+const ROUTES = ["home", "about", "skills", "projects", "hobbies", "contact", "validation"];
 
 function getRoute() {
   const raw = window.location.hash.replace(/^#\/?/, "").split("?")[0];
@@ -44,7 +45,8 @@ function App() {
     skills: <SkillsPage />,
     projects: <ProjectsPage />,
     hobbies: <HobbiesPage />,
-    contact: <ContactPage />
+    contact: <ContactPage />,
+    validation: <Formvalidation />
   };
 
   return (
