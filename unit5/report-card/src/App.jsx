@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Students from './pages/Students'
@@ -65,7 +65,7 @@ export default function App() {
       <StudentsContext.Provider
         value={{ students, addStudent, updateStudent, deleteStudent, getStudent, resetStudents }}
       >
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <main className="container main-content">
             <Routes>
@@ -76,7 +76,7 @@ export default function App() {
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
-        </BrowserRouter>
+        </HashRouter>
       </StudentsContext.Provider>
     </ThemeContext.Provider>
   )

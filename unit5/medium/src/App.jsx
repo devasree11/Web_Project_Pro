@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { TaskProvider } from './context/TaskContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { ToastProvider } from './context/ToastContext.jsx'
@@ -58,9 +58,9 @@ export default function App() {
       <ToastProvider>
         <UiProvider>
           <TaskProvider>
-            <BrowserRouter>
+            <HashRouter>
               <Shell />
-            </BrowserRouter>
+            </HashRouter>
           </TaskProvider>
         </UiProvider>
       </ToastProvider>
